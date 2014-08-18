@@ -1,0 +1,169 @@
+@import url(http://fonts.googleapis.com/css?family=Changa+One);
+$lightBlue: #D5F1F0;
+$lightPink: #F5CBD3;
+$darkBlue: #75CBD2;
+$hotPink: #ec008c;
+$grape: #6f1549;
+$forest: #5b7e0e;
+$menuFont: #5b7e0e;
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+
+body {
+  background-color: $darkBlue;
+}
+
+
+#main_nav_container {
+  background-color: $lightPink;
+  padding-top: 0.3em;
+
+  #main_navigation {
+    @include grid-row();
+
+    li {
+      @include grid-column(2);
+
+      a {
+        color: $menuFont;
+        font-family:'Changa One', cursive;
+      }
+
+      #auction_search_search_term {
+        border-radius: 20px;
+        height: 1.7em;
+      }
+    }
+  }
+
+}
+
+$padding: 3em;
+
+header {
+  @include grid-row();
+  background-color: white;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+
+
+  h1{
+    top: -10px;
+    @include grid-column(5);
+  }
+
+  #header_right{
+    @include grid-column(7);
+    text-align: center;
+
+    h2{
+      color: $darkBlue;
+      font-size: 1.3em;
+    }
+
+    #page_navigation{
+      padding-top: 3em;
+
+      li{
+
+        a{
+          padding-right: $padding;
+          padding-left: $padding;
+
+          padding-top: 5px;
+          padding-bottom: 5px;
+
+          border-radius: 15px;
+          text-align: center;
+
+          color: white;
+          font-size: 0.9em;
+        }
+      }
+
+      li:nth-child(1) > a{
+        background-color: $darkBlue;
+
+      }
+
+      li:nth-child(2) > a{
+        background-color: $forest;
+
+      }
+
+      li:nth-child(3) > a{
+        background-color: $grape;
+      }
+
+      li:nth-child(4) > a{
+        background-color: $hotPink;
+        // margin-right: 2em;
+      }
+    }
+ }
+}
+
+
+#devise_nav_container{
+  text-align: right;
+  background-color: $lightBlue;
+  border: 2px, solid, black;
+
+
+  #devise_navigation {
+    @include grid-row();
+    width: 100%;
+    background-color: $lightBlue;
+
+    li:first-child {
+
+      a{
+        border-right: 2px solid $darkBlue;
+        padding-right: 4px;
+      }
+
+    li {
+
+      a{
+
+      }
+     }
+    }
+  }
+}
+
+
+#content {
+  background-color: white;
+  border-bottom-right-radius: 20px;
+  // border-bottom-left-radius: 20px;
+}
+
+
+li {
+ display: inline;
+}
+
+label {
+  display: none;
+}
